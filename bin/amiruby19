@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+begin
+  require 'amiruby19'
+rescue LoadError => exception
+  $:.unshift File.dirname(File.expand_path(__FILE__)) + "/../lib"
+  retry
+end

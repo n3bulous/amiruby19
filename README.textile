@@ -1,0 +1,99 @@
+h1. Am I Ruby 1.9?
+
+h2. Description
+
+So you want to move to Ruby 1.9 but you _need_ your gems?  Thanks to the folks at "Brightbox":http://www.brightbox.co.uk/ we have "Is it Ruby 1.9":isitruby19.com and an "API":http://forum.brightbox.co.uk/forums/isitruby19-com/topics/api-is-added.
+
+Building off the API announcement, conveniently released a few days before I needed it, I created *Am I Ruby 1.9* to quickly determine how close your installed gems are to being ready.
+
+The highly classified algorithm is listed below.  The _sum_ is merely the number of works_for_me true responses for the gem.  Only the five most recent responses are considered.
+
+<pre>
+rate = sum / recent.size.to_f
+ratio = "#{sum} / #{recent.size}"
+
+if rate >= 0.80
+  works[gem_name] = ratio
+elsif rate >= 0.40
+  may_work[gem_name] = ratio
+else
+  fails[gem_name] = ratio
+end
+</pre>
+
+Please note that this doesn't guarantee any gem will or will not work.  It merely tries to guesstimate based on what other people have reported.  Better ideas will be merged!
+
+h2. Requirements
+
+*Am I Ruby 1.9* is "tested" with Ruby 1.8.[67], and requires the following gem:
+
+* json
+
+h2. Installation
+
+<pre>
+gem install n3bulous-amiruby19
+</pre>
+
+h2. Usage
+
+Right now, you just run *amiruby19* with no arguments.  After some amount of time directly proportional to the number of gems installed, you will see five different sections of output:
+
+* WORKS - 80% or more responses are positive.
+* MAY WORK - 40% or more of responses are positive
+* FAILS - Less than 40% of responses are positive.
+* UNTESTED - No responses are recorded for these gems.
+* MISSING - The gem is not known on Is It Ruby 1.9.
+
+h2. Example Output
+
+Your output will look different, and this lists only the first 11 gems I have installed.  This output will allow you "gem19 install" with some cut and paste to test the results.
+
+<pre>
+WORKS
+-----
+activeresource acts_as_versioned activerecord addressable actionpack actionmailer
+
+MAY WORK
+--------
+activesupport
+
+FAILS
+-----
+
+UNTESTED
+--------
+abstract acts_as_cached AdoccaMemcache archive-tar-minitar
+
+MISSING
+-------
+</pre>
+
+h2. TODO
+
+* Maintain a blacklist of working gems.
+* Ignore already installed Ruby 1.9 gems.
+
+h2. LICENSE
+
+Copyright (c) 2009 Kevin McFadden
+Copyright (c) 2009 Concepts Ahead
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

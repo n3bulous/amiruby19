@@ -10,15 +10,15 @@ spec = Gem::Specification.new do |s|
   s.name             = 'amiruby19'
   s.version          = Amiruby19::Version.to_s
   s.has_rdoc         = true
-  s.extra_rdoc_files = %w(README.rdoc)
-  s.rdoc_options     = %w(--main README.rdoc)
-  s.summary          = "This gem does ... "
-  s.author           = 'First Last'
-  s.email            = 'user@example.com'
-  s.homepage         = 'http://my-site.net'
-  s.files            = %w(README.rdoc Rakefile) + Dir.glob("{lib,test}/**/*")
-  # s.executables    = ['amiruby19']
-  
+  s.extra_rdoc_files = %w(README.textile)
+  s.rdoc_options     = %w(--main README.textile)
+  s.summary          = "Verifies whether your Ruby 1.8 gems are compatible with Ruby 1.9 based on entries from http://isitruby19.com"
+  s.author           = 'Kevin McFadden'
+  s.email            = 'kevin+github@conceptsahead.com'
+  s.homepage         = 'http://conceptsahead.com'
+  s.files            = %w(README.textile Rakefile) + Dir.glob("{lib,test}/**/*")
+  s.executables    = ['amiruby19']
+
   # s.add_dependency('gem_name', '~> 0.0.1')
 end
 
