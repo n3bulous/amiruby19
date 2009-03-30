@@ -78,7 +78,7 @@ h2. TODO
 
 h2. LICENSE
 
-Copyright (c) 2009 Kevin McFadden
+Copyright (c) 2009 Kevin McFadden<br />
 Copyright (c) 2009 Concepts Ahead
 
 Permission is hereby granted, free of charge, to any person obtaining
