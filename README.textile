@@ -25,6 +25,10 @@ Please note that this doesn't guarantee any gem will or will not work.  It merel
 
 Another fine gem created with the help of "simple-gem":http://github.com/reagent/simple-gem.  Your definition of fine may differ, but simple-gem is pretty good and simple.
 
+h2. Be Nice
+
+I have no idea what Is it Ruby 1.9 is using for hosting, but don't overdo it if only to be nice to their servers.
+
 h2. Requirements
 
 *Am I Ruby 1.9* is "tested" with Ruby 1.8.[67], and requires the following gem:
