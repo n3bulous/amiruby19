@@ -79,6 +79,7 @@ h2. TODO
 
 * Maintain a blacklist of working gems.
 * Ignore already installed Ruby 1.9 gems.
+* Side project to provide interactive gem install testing and isitruby19.com form submission.
 
 h2. LICENSE
 
